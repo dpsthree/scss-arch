@@ -5,12 +5,15 @@
  */
 
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { WjInputModule } from '@grapecity/wijmo.angular2.input';
+
+const componentModuleList = [
+  WjInputModule,
+];
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule
-  ]
+  imports: componentModuleList,
+  exports: componentModuleList
 })
 export class WijmoDepsModule { }

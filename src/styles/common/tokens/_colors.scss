@@ -1,0 +1,6 @@
+// Using CSS custom properties of scss variables to
+// retain the ability to adjust these at runtime.
+// Based on browser needs, this may not be an option
+:root {
+  --input-active-background-color: coral;
+}

@@ -20,13 +20,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WijmoDepsModule } from '../wijmo-deps/wijmo-deps.module';
-
+import { ComboBoxComponent } from './combo-box/combo-box.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [ComboBoxComponent],
   imports: [
     CommonModule,
     WijmoDepsModule
-  ]
+  ],
+  exports: [ComboBoxComponent]
 })
 export class DesignSystemModule { }

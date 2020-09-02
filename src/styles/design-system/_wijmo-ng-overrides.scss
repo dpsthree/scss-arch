@@ -10,4 +10,4 @@
 // Since it consumes the base overrides, consumers need
 // only import this file into their root scss file.
 
-@use '../tokens/wijmo-overrides'
+@use '../common/overrides/wijmo-customizations'

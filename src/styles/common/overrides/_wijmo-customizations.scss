@@ -14,7 +14,16 @@
 // as _wijmo-ng-overrides.scss should be used instead.
 //
 
+
+@use '../tokens/colors';
+
 // TODO: investigate why @use doesn't work
 // and/or if import used within a file imported with @use
 // multiple times creates multiple copies of wijmo.css
 @import '@grapecity/wijmo.styles/wijmo.css';
+
+// This rule is defined here because it applies to the use of Wijmo
+// regardless of library or framework
+.wj-state-focused {
+  background-color: var(--input-active-background-color);
+}
