@@ -19,15 +19,16 @@
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { WijmoDepsModule } from '../wijmo-deps/wijmo-deps.module';
+import { WijmoDepsModule } from './wijmo-deps/wijmo-deps.module';
 import { ComboBoxComponent } from './combo-box/combo-box.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [ComboBoxComponent],
+  declarations: [ComboBoxComponent, HeaderComponent],
   imports: [
     CommonModule,
     WijmoDepsModule
   ],
-  exports: [ComboBoxComponent]
+  exports: [ComboBoxComponent, HeaderComponent]
 })
 export class DesignSystemModule { }

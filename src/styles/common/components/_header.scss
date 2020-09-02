@@ -1,0 +1,21 @@
+@use '../base';
+
+.header {
+  // The following could be set implemented as a custom
+  // property or a SCSS variable, but since it is not
+  // reused we are going to default to YAGNI
+  height: 64px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: var(--primary-surface-background-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  // Formal BEM isn't necessary if parent selector
+  // is used consistently and results in cleaner/more flexible markup
+  & .title {
+    color: var(--primary-surface-text-color);
+    font-size: var(--header-text-size);
+  }
+}

@@ -11,3 +11,7 @@
 // system. A native css component set will also be built
 // for demonstration purposes and to identify common code between
 // the two techinques to move into this directory.
+
+@use './base';
+@use './components';
+@use './overrides/wijmo-customizations'

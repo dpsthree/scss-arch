@@ -3,5 +3,8 @@
 // design system as a library. However, since it is being built
 // as "part of the app" it can reside here for simplicity.
 
-// Third party overrides
-@use './wijmo-ng-overrides'
+// Core design styles
+@use '../common';
+
+// Angular specific wijmo overrides
+@use '../common/overrides/wijmo-ng-customizations';

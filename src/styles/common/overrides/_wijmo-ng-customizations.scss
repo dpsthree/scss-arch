@@ -3,11 +3,7 @@
 // 2. The application of those styles in Wijmo components
 
 // This file provides overrides to the application of Wijmo
-// styles as they are applied to Wijmo components.
+// styles as they are applied to Wijmo Angular components.
 
 // Rules in this file should not have any affect on the appearance
 // of Wijmo outside of the context of Angular.
-// Since it consumes the base overrides, consumers need
-// only import this file into their root scss file.
-
-@use '../common/overrides/wijmo-customizations'
