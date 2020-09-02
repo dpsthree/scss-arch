@@ -1,1 +1,64 @@
-/* You can add global styles to this file, and also import other style files */
+// Root file that brings together the top level pieces
+// The use of '@use' in place of '@import' allows us
+// to greatly reduce the complexity of this file as compared
+// to a traditional 7-1 architecture.
+
+// Additionally, the introduction of a custom component
+// design system shifts some of the responsibility of layering
+// and overriding into the design system implementation
+
+// Base styles needed across screens and components
+// TODO - import
+
+// Themes - only needed if using color for content
+// not contained within a design system component
+// or
+// TODO - import
+
+// Design system styles
+// Note: this would normally come in as if it
+// were third party
+// Also, this will eventually need to be imported in a similar way
+// as Angular Material would be imported. This allows the
+// internal characteristics to be configured by the app
+// author without the design system knowing about the app css structure
+@use './styles/design-system';
+
+// Layouts
+// TODO - import
+
+// Page styles
+// Note: Since they are app specific and non-transferrable
+// consider authoring/applying at the component level. This is
+// not a recommendation, simply a consideration. I'm not yet
+// sure if it is better or not
+// TODO - import
+
+// ------------------------------------
+// If this application did not use a custom design system
+// this file would look more like the following
+
+// @import '_wijmo-ng-overrides';
+
+// @import 'base/reset';
+// @import 'base/typography';
+
+// @import 'layout/navigation';
+// @import 'layout/grid';
+
+// @import 'components/buttons';
+// @import 'components/carousel';
+
+// @import 'pages/home';
+// @import 'pages/about';
+
+// @import 'themes/theme';
+
+// -------------------------------------
+// Furthermore, if @use was not used this file would look
+// like the section above with an additional grouping much
+// like the following:
+
+// @import 'abstracts/variables';
+// @import 'abstracts/functions';
+// @import 'abstracts/mixins';

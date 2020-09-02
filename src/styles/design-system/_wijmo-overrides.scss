@@ -1,0 +1,20 @@
+// In this project there are two layers of Wijmo
+// 1. The native collection of styles
+// 2. The application of those styles in Wijmo components
+
+// This file provides mixins, functions, rules and selectors for
+// overriding the appearance of the native wijmo appearance.
+
+// For the purposes of this project this file should only
+// contain overrides to the raw css. Overrides that apply
+// to wijmo components should occur in a framework specific
+// extension to this file. This file should not be directly
+// imported unless the intent is to consume wijmo directly
+// (not recommended). Instead a framework specific file such
+// as _wijmo-ng-overrides.scss should be used instead.
+//
+
+// TODO: investigate why @use doesn't work
+// and/or if import used within a file imported with @use
+// multiple times creates multiple copies of wijmo.css
+@import '@grapecity/wijmo.styles/wijmo.css';
