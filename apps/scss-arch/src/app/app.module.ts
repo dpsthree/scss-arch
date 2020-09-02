@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { UiDesignSystemModule } from '@scss-arch/ui-design-system';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DesignSystemModule } from './design-system/design-system.module';
 
 // The word Wijmo should not appear anywhere within the content declared by this component or
 // any of their children.
@@ -14,7 +14,7 @@ import { DesignSystemModule } from './design-system/design-system.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DesignSystemModule
+    UiDesignSystemModule
   ],
   providers: [],
   bootstrap: [AppComponent]

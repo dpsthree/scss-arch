@@ -14,8 +14,7 @@
 // as _wijmo-ng-overrides.scss should be used instead.
 //
 
-
-@use '../base';
+@use '../base/colors';
 
 // TODO: investigate why @use doesn't work
 // and/or if import used within a file imported with @use

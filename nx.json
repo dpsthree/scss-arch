@@ -16,6 +16,9 @@
     },
     "scss-arch-e2e": {
       "tags": []
+    },
+    "ui-design-system": {
+      "tags": []
     }
   }
 }

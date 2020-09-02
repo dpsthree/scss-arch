@@ -27,9 +27,7 @@
               "apps/scss-arch/src/favicon.ico",
               "apps/scss-arch/src/assets"
             ],
-            "styles": [
-              "apps/scss-arch/src/styles.scss"
-            ],
+            "styles": ["apps/scss-arch/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -91,9 +89,7 @@
               "apps/scss-arch/src/favicon.ico",
               "apps/scss-arch/src/assets"
             ],
-            "styles": [
-              "apps/scss-arch/src/styles.scss"
-            ],
+            "styles": ["apps/scss-arch/src/styles.scss"],
             "scripts": []
           }
         },
@@ -104,9 +100,7 @@
               "apps/scss-arch/tsconfig.app.json",
               "apps/scss-arch/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -131,12 +125,43 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/scss-arch-e2e/tsconfig.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
-    }},
+    },
+    "ui-design-system": {
+      "projectType": "library",
+      "root": "libs/ui-design-system",
+      "sourceRoot": "libs/ui-design-system/src",
+      "prefix": "scss-arch",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-design-system/tsconfig.lib.json",
+              "libs/ui-design-system/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ui-design-system/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-design-system/jest.config.js",
+            "tsConfig": "libs/ui-design-system/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/ui-design-system/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    }
+  },
   "defaultProject": "scss-arch"
 }

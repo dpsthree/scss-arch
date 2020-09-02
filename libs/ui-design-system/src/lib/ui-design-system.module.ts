@@ -31,4 +31,4 @@ import { HeaderComponent } from './header/header.component';
   ],
   exports: [ComboBoxComponent, HeaderComponent]
 })
-export class DesignSystemModule { }
+export class UiDesignSystemModule {}
