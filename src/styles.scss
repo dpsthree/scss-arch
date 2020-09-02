@@ -8,11 +8,16 @@
 // and overriding into the design system implementation
 
 // Base styles needed across screens and components
+// Note: The design system may choose to dictate choices like
+// line height, font, etc... If so there may not be
+// a need for base styles at the app root
 // TODO - import
 
 // Themes - only needed if using color for content
-// not contained within a design system component
-// or
+// not contained within a design system component.
+// Alternatively, the design system could dictate the theme.
+// If so, import color theme from design system to utilize colors
+// for non-component edits
 // TODO - import
 
 // Design system styles
@@ -22,6 +27,8 @@
 // as Angular Material would be imported. This allows the
 // internal characteristics to be configured by the app
 // author without the design system knowing about the app css structure
+// Alternatively, design system can dictate color. If so, the following
+// should be sufficient
 @use './styles/design-system';
 
 // Layouts
