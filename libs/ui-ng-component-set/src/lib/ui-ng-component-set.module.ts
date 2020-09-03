@@ -22,13 +22,15 @@ import { CommonModule } from '@angular/common';
 import { WijmoDepsModule } from './wijmo-deps/wijmo-deps.module';
 import { ComboBoxComponent } from './combo-box/combo-box.component';
 import { HeaderComponent } from './header/header.component';
+import { FixedHeaderLayoutComponent } from './fixed-header-layout/fixed-header-layout.component';
 
 @NgModule({
-  declarations: [ComboBoxComponent, HeaderComponent],
-  imports: [
-    CommonModule,
-    WijmoDepsModule
+  declarations: [
+    ComboBoxComponent,
+    HeaderComponent,
+    FixedHeaderLayoutComponent,
   ],
-  exports: [ComboBoxComponent, HeaderComponent]
+  imports: [CommonModule, WijmoDepsModule],
+  exports: [ComboBoxComponent, HeaderComponent, FixedHeaderLayoutComponent],
 })
 export class UiNgComponentSetModule {}

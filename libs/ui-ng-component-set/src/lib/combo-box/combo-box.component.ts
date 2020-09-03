@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-combo-box',
+  selector: 'scss-arch-combo-box',
   templateUrl: './combo-box.component.html',
   styleUrls: ['./combo-box.component.scss']
 })
