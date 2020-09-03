@@ -27,7 +27,13 @@
               "apps/scss-arch/src/favicon.ico",
               "apps/scss-arch/src/assets"
             ],
-            "styles": ["apps/scss-arch/src/styles.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["libs/ui-design-primatives/src"]
+            },
+            "styles": [
+              "libs/ui-ng-component-set/src/lib/ui-ng-component-set.scss",
+              "apps/scss-arch/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -130,29 +136,61 @@
         }
       }
     },
-    "ui-design-system": {
+    "ui-ng-component-set": {
       "projectType": "library",
-      "root": "libs/ui-design-system",
-      "sourceRoot": "libs/ui-design-system/src",
+      "root": "libs/ui-ng-component-set",
+      "sourceRoot": "libs/ui-ng-component-set/src",
       "prefix": "scss-arch",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/ui-design-system/tsconfig.lib.json",
-              "libs/ui-design-system/tsconfig.spec.json"
+              "libs/ui-ng-component-set/tsconfig.lib.json",
+              "libs/ui-ng-component-set/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/ui-design-system/**/*"]
+            "exclude": ["**/node_modules/**", "!libs/ui-ng-component-set/**/*"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/ui-design-system/jest.config.js",
-            "tsConfig": "libs/ui-design-system/tsconfig.spec.json",
+            "jestConfig": "libs/ui-ng-component-set/jest.config.js",
+            "tsConfig": "libs/ui-ng-component-set/tsconfig.spec.json",
             "passWithNoTests": true,
-            "setupFile": "libs/ui-design-system/src/test-setup.ts"
+            "setupFile": "libs/ui-ng-component-set/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "ui-design-primatives": {
+      "projectType": "library",
+      "root": "libs/ui-design-primatives",
+      "sourceRoot": "libs/ui-design-primatives/src",
+      "prefix": "scss-arch",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-design-primatives/tsconfig.lib.json",
+              "libs/ui-design-primatives/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ui-design-primatives/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-design-primatives/jest.config.js",
+            "tsConfig": "libs/ui-design-primatives/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/ui-design-primatives/src/test-setup.ts"
           }
         }
       },

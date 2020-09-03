@@ -13,7 +13,12 @@
     "module": "es2020",
     "lib": ["es2018", "dom"],
     "paths": {
-      "@scss-arch/ui-design-system": ["libs/ui-design-system/src/index.ts"]
+      "@scss-arch/ui-ng-component-set": [
+        "libs/ui-ng-component-set/src/index.ts"
+      ],
+      "@scss-arch/ui-design-primatives": [
+        "libs/ui-design-primatives/src/index.ts"
+      ]
     },
     "rootDir": "."
   }

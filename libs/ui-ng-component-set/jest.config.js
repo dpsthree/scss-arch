@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'ui-design-system',
+  name: 'ui-ng-component-set',
   preset: '../../jest.config.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -12,7 +12,7 @@ module.exports = {
       ],
     },
   },
-  coverageDirectory: '../../coverage/libs/ui-design-system',
+  coverageDirectory: '../../coverage/libs/ui-ng-component-set',
   snapshotSerializers: [
     'jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js',
     'jest-preset-angular/build/AngularSnapshotSerializer.js',

@@ -1,0 +1,8 @@
+// This file will act as the entry point to the design
+// system styles.
+
+// Core design styles
+@use 'ui-design-primatives';
+
+// Angular specific wijmo overrides
+@use 'overrides/wijmo-ng-customizations';

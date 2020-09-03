@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { UiDesignSystemModule } from '@scss-arch/ui-design-system';
+import { UiNgComponentSetModule } from '@scss-arch/ui-ng-component-set';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +14,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UiDesignSystemModule
+    UiNgComponentSetModule
   ],
   providers: [],
   bootstrap: [AppComponent]
