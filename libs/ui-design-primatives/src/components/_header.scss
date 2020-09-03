@@ -1,7 +1,15 @@
+// Though this is not needed because
+// CSS customr properties are resolved at runtime, it
+// is still nice to take advantage of @use to establish
+// our dependency. This way, if someone uses this file
+// without also including base it will still work.
+// Similarly, if someone moves this file without bringing
+// along base they will now receive a compilation error.
+// These benefits were not possible with @import
 @use '../base';
 
 .header {
-  // The following could be set implemented as a custom
+  // The following could be implemented as a custom
   // property or a SCSS variable, but since it is not
   // reused we are going to default to YAGNI
   height: 64px;

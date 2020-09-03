@@ -12,4 +12,5 @@ whatever means they would typically consume third party CSS
 
 With this approach the angular projects can import/use the files directly
 
-This repo demonstrates approach 2.
+This repo demonstrates approach 2. But there is nothing about the implementation of these styles
+that require they be used in an Angular project
