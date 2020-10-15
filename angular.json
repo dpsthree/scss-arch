@@ -199,6 +199,41 @@
           "style": "scss"
         }
       }
+    },
+    "scss-arch-ui-app-styles": {
+      "projectType": "library",
+      "root": "libs/scss-arch/ui-app-styles",
+      "sourceRoot": "libs/scss-arch/ui-app-styles/src",
+      "prefix": "scss-arch",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/scss-arch/ui-app-styles/tsconfig.lib.json",
+              "libs/scss-arch/ui-app-styles/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/scss-arch/ui-app-styles/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/scss-arch/ui-app-styles/jest.config.js",
+            "tsConfig": "libs/scss-arch/ui-app-styles/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/scss-arch/ui-app-styles/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "defaultProject": "scss-arch"

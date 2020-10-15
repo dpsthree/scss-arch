@@ -22,6 +22,9 @@
     },
     "ui-design-primatives": {
       "tags": []
+    },
+    "scss-arch-ui-app-styles": {
+      "tags": []
     }
   }
 }

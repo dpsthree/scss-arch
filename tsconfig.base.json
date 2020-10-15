@@ -18,6 +18,9 @@
       ],
       "@scss-arch/ui-design-primatives": [
         "libs/ui-design-primatives/src/index.ts"
+      ],
+      "@scss-arch/scss-arch/ui-app-styles": [
+        "libs/scss-arch/ui-app-styles/src/index.ts"
       ]
     },
     "rootDir": "."
